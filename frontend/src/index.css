@@ -90,3 +90,29 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+/* Blue header */
+.navbar {
+  background: #2563eb !important;
+}
+
+/* Blue Sign Up and Login buttons */
+button,
+.btn,
+.btn-primary,
+.login-btn,
+.signup-btn {
+  background: #2563eb !important;
+  border-color: #2563eb !important;
+  color: white !important;
+}
+
+/* Button hover */
+button:hover,
+.btn:hover,
+.btn-primary:hover,
+.login-btn:hover,
+.signup-btn:hover {
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+  color: white !important;
+}

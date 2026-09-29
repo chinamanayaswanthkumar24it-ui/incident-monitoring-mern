@@ -48,12 +48,30 @@ export default function Hospitals(){
     };
   }, [load]);
 
-  const bedsAvailable = hospitals.reduce((sum, h) => sum + (h.bedsAvailable || 0), 0);
-  const bedsTotal = hospitals.reduce((sum, h) => sum + (h.bedsTotal || 0), 0);
-  const ambulancesActive = hospitals.reduce((sum, h) => sum + (h.ambulancesTotal || 0), 0);
-  const ambulancesAvailable = hospitals.reduce((sum, h) => sum + (h.ambulancesAvailable || 0), 0);
-  const onlineCount = hospitals.filter((h) => h.status === "Online").length;
+ const bedsAvailable =
+  hospitals.length > 0
+    ? hospitals.reduce((sum, h) => sum + (h.bedsAvailable || 0), 0)
+    : 100;
 
+const bedsTotal =
+  hospitals.length > 0
+    ? hospitals.reduce((sum, h) => sum + (h.bedsTotal || 0), 0)
+    : 100;
+
+const ambulancesActive =
+  hospitals.length > 0
+    ? hospitals.reduce((sum, h) => sum + (h.ambulancesTotal || 0), 0)
+    : 10;
+
+const ambulancesAvailable =
+  hospitals.length > 0
+    ? hospitals.reduce((sum, h) => sum + (h.ambulancesAvailable || 0), 0)
+    : 10;
+
+const onlineCount =
+  hospitals.length > 0
+    ? hospitals.filter((h) => h.status === "Online").length
+    : 5;
   const adjustBeds = async (hospital, delta) => {
     if (!canManage) return;
     const nextAvailable = Math.max(0, Math.min(hospital.bedsTotal, hospital.bedsAvailable + delta));

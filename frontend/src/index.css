@@ -244,3 +244,40 @@ button:hover,
   color: #ffffff !important;
   stroke: #ffffff !important;
 }
+/* =========================================
+   HEADER NAVIGATION BUTTONS - BLUE
+   ========================================= */
+
+/* All navigation buttons inside blue header */
+.app-shell .topbar .app-nav .btn,
+.app-shell .topbar .app-nav button {
+  background: #2563eb !important;
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  box-shadow: none !important;
+}
+
+/* Active navigation button */
+.app-shell .topbar .app-nav a.active {
+  background: #2563eb !important;
+  background-color: #2563eb !important;
+  color: #ffffff !important;
+}
+
+/* Header navigation button hover */
+.app-shell .topbar .app-nav .btn:hover,
+.app-shell .topbar .app-nav button:hover,
+.app-shell .topbar .app-nav a.active:hover {
+  background: #1d4ed8 !important;
+  background-color: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-color: #1d4ed8 !important;
+}
+
+/* Icons inside header buttons */
+.app-shell .topbar .app-nav .btn svg,
+.app-shell .topbar .app-nav button svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}

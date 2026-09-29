@@ -142,3 +142,34 @@ button:hover,
   border-color: #1d4ed8 !important;
   color: white !important;
 }
+/* BLUE HEADER FOR ALL APP PAGES */
+.app-shell .topbar {
+  background: #2563eb !important;
+  border-bottom: 1px solid #1d4ed8 !important;
+}
+
+/* Header text and links */
+.app-shell .topbar .brand,
+.app-shell .topbar .nav-links a {
+  color: #ffffff !important;
+}
+
+/* Header brand blue accent */
+.app-shell .topbar .brand > span:last-child span {
+  color: #dbeafe !important;
+}
+
+/* Header buttons */
+.app-shell .topbar .btn,
+.app-shell .topbar button {
+  background: #ffffff !important;
+  color: #2563eb !important;
+  border-color: #ffffff !important;
+}
+
+/* Header button hover */
+.app-shell .topbar .btn:hover,
+.app-shell .topbar button:hover {
+  background: #dbeafe !important;
+  color: #1d4ed8 !important;
+}

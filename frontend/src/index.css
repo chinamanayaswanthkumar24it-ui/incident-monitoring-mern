@@ -173,3 +173,26 @@ button:hover,
   background: #dbeafe !important;
   color: #1d4ed8 !important;
 }
+/* DASHBOARD BUTTONS - BLUE */
+.dashboard .btn-primary {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+}
+
+.dashboard .btn-primary:hover {
+  background: #1d4ed8 !important;
+  border-color: #1d4ed8 !important;
+}
+
+/* LIVE MAP SEARCH BUTTON - BLUE */
+.dashboard .map-panel .icon-btn {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+}
+
+.dashboard .map-panel .icon-btn:hover {
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+}

@@ -16,6 +16,7 @@ export default function Hospitals(){
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
   const [busyId, setBusyId] = useState(null);
+  const [callingAmbulance, setCallingAmbulance] = useState(false);
 
   const canManage = user?.role === "hospital" || user?.role === "admin";
 
@@ -70,7 +71,13 @@ export default function Hospitals(){
   return <AppPage>
     <div className="page-heading">
       <div><span className="section-kicker">HOSPITAL NETWORK</span><h1>Hospital readiness</h1><p>Monitor emergency capacity and incoming cases.</p></div>
-      <button className="btn btn-primary"><Ambulance size={17}/> Request ambulance</button>
+      <button
+  className="btn btn-primary"
+  onClick={() => setCallingAmbulance(true)}
+>
+  <Ambulance size={17} />
+  {callingAmbulance ? "Calling Ambulance 108..." : "Request ambulance"}
+</button>
     </div>
 
     {error && <div className="page-error">{error}</div>}

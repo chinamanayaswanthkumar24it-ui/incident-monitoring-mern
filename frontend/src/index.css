@@ -196,3 +196,51 @@ button:hover,
   background: #1d4ed8 !important;
   color: #ffffff !important;
 }
+/* ============================= */
+/* DASHBOARD BLUE BUTTONS        */
+/* ============================= */
+
+/* Report Incident button */
+.dashboard .page-heading .btn.btn-primary {
+  background-color: #2563eb !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 2px solid #2563eb !important;
+}
+
+/* Report Incident hover */
+.dashboard .page-heading .btn.btn-primary:hover {
+  background-color: #1d4ed8 !important;
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+}
+
+/* ============================= */
+/* LIVE MAP SEARCH BUTTON        */
+/* ============================= */
+
+.dashboard .map-panel .panel-head .icon-btn {
+  background-color: #2563eb !important;
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 2px solid #2563eb !important;
+}
+
+/* Search icon */
+.dashboard .map-panel .panel-head .icon-btn svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Live Map button hover */
+.dashboard .map-panel .panel-head .icon-btn:hover {
+  background-color: #1d4ed8 !important;
+  background: #1d4ed8 !important;
+  color: #ffffff !important;
+  border-color: #1d4ed8 !important;
+}
+
+.dashboard .map-panel .panel-head .icon-btn:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}

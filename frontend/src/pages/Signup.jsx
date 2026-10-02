@@ -19,7 +19,7 @@ export default function Signup(){
    setSubmitting(true);
    try {
      await signup(name, email, password, role);
-     nav("/dashboard");
+     nav("/login");
    } catch(err) {
      setError(err.message || "Could not create your account. Please try again.");
    } finally {

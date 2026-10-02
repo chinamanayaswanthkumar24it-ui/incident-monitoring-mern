@@ -434,10 +434,12 @@ button:hover,
   box-sizing: border-box !important;
 }
 /* HOW IT WORKS SECTION - BLACK TEXT */
-.how-it-works,
-.how-it-works h2,
-.how-it-works h3,
-.how-it-works p {
+/* HOW IT WORKS - ONLY THESE TEXTS BLACK */
+.how-it-works {
+  color: #000000 !important;
+}
+
+.how-it-works h2 {
   color: #000000 !important;
 }
  

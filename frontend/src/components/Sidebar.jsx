@@ -23,7 +23,7 @@ export default function Sidebar() {
     <div className="side-title">COMMAND CENTER</div>
     {links.map(([to,label,Icon]) => <NavLink key={label} to={to} className="side-link"><Icon size={18}/><span>{label}</span></NavLink>)}
     <div className="side-bottom">
-      <button className="side-link"><Settings size={18}/> Settings</button>
+       
       <button className="side-link danger" onClick={handleSignOut}><LogOut size={18}/> Sign out</button>
     </div>
     <div className="status-mini"><span className="pulse"></span><div><b>System online</b><small>Signed in as {user?.name || "..."}</small></div></div>

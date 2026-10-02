@@ -250,7 +250,7 @@ button:hover,
    ========================================= */
 
 /* All navigation buttons inside blue header */
-.app-shell .topbar .app-nav .btn,
+ .app-shell .topbar .app-nav .btn,
 .app-shell .topbar .app-nav button {
   background: #2563eb !important;
   background-color: #2563eb !important;

@@ -392,4 +392,297 @@ button:hover,
   border-color: #2563eb !important;
 }
 /* Background image across the application */
+/* ============================================================
+   INCIDENTWATCH COMMAND CENTER DASHBOARD
+   ============================================================ */
+
+/* MAIN BACKGROUND */
+.app-shell {
+  min-height: 100vh !important;
+  background:
+    linear-gradient(
+      rgba(10, 27, 52, 0.35),
+      rgba(10, 27, 52, 0.35)
+    ),
+    url("https://images.unsplash.com/photo-1639313521811-fdfb1c040ddb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWFuZCUyMGNlbnRlcnxlbnwwfHwwfHx8MA%3D%3D")
+    center center / cover fixed no-repeat !important;
+}
+
+
+/* ============================================================
+   HEADER - TRANSPARENT
+   ============================================================ */
+
+.app-shell .topbar,
+.app-shell .navbar {
+  background: transparent !important;
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* Header links */
+.app-shell .topbar a,
+.app-shell .navbar a,
+.app-shell .topbar .nav-links a,
+.app-shell .navbar .nav-links a {
+  color: #000000 !important;
+  background: transparent !important;
+}
+
+/* Header hover */
+.app-shell .topbar a:hover,
+.app-shell .navbar a:hover {
+  color: #000000 !important;
+  background: rgba(255,255,255,0.35) !important;
+}
+
+
+/* ============================================================
+   DASHBOARD MAIN AREA
+   ============================================================ */
+
+.app-shell .dashboard {
+  background: transparent !important;
+  color: #000000 !important;
+  min-height: calc(100vh - 80px);
+}
+
+
+/* ============================================================
+   COMMAND CENTER TITLE
+   ============================================================ */
+
+.dashboard .section-kicker {
+  color: #000000 !important;
+  font-weight: 800 !important;
+  letter-spacing: 2px !important;
+}
+
+.dashboard .page-heading h1 {
+  color: #000000 !important;
+  font-weight: 800 !important;
+}
+
+.dashboard .page-heading p {
+  color: #000000 !important;
+}
+
+
+/* ============================================================
+   REPORT INCIDENT
+   ============================================================ */
+
+.dashboard .page-heading .btn-primary {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border: 1px solid #2563eb !important;
+  border-radius: 12px !important;
+  font-weight: 700 !important;
+}
+
+.dashboard .page-heading .btn-primary:hover {
+  background: #1d4ed8 !important;
+}
+
+
+/* ============================================================
+   STAT CARDS
+   ============================================================ */
+
+.dashboard .stats-grid {
+  display: grid !important;
+  grid-template-columns: repeat(4, 1fr) !important;
+  gap: 16px !important;
+}
+
+.dashboard .stats-grid > * {
+  background: rgba(255,255,255,0.96) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(220,225,235,0.9) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+}
+
+
+/* ============================================================
+   DASHBOARD TWO-COLUMN AREA
+   ============================================================ */
+
+.dashboard .dashboard-grid {
+  display: grid !important;
+  grid-template-columns: 1.55fr 0.85fr !important;
+  gap: 22px !important;
+  margin-top: 22px !important;
+}
+
+
+/* ============================================================
+   PANELS
+   ============================================================ */
+
+.dashboard .panel {
+  background: rgba(255,255,255,0.97) !important;
+  border-radius: 16px !important;
+  border: 1px solid rgba(220,225,235,0.9) !important;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12) !important;
+  overflow: hidden !important;
+}
+
+
+/* ============================================================
+   PANEL HEADER
+   ============================================================ */
+
+.dashboard .panel-head {
+  background: rgba(255,255,255,0.98) !important;
+  border-bottom: 1px solid #e7ebf0 !important;
+  padding: 16px 20px !important;
+}
+
+.dashboard .panel-head h2 {
+  color: #000000 !important;
+  font-weight: 750 !important;
+}
+
+.dashboard .panel-head p {
+  color: #000000 !important;
+  opacity: 0.65 !important;
+}
+
+
+/* ============================================================
+   LIVE MAP SEARCH BUTTON
+   ============================================================ */
+
+.dashboard .map-panel .icon-btn {
+  background: #2563eb !important;
+  border: 1px solid #2563eb !important;
+  color: #ffffff !important;
+  width: 38px !important;
+  height: 38px !important;
+  border-radius: 10px !important;
+}
+
+.dashboard .map-panel .icon-btn svg {
+  color: #ffffff !important;
+}
+
+
+/* ============================================================
+   LIVE STATUS DOT
+   ============================================================ */
+
+.dashboard .live-dot {
+  background: #16a34a !important;
+}
+
+
+/* ============================================================
+   RECENT INCIDENTS
+   ============================================================ */
+
+.dashboard .incidents-panel {
+  background: rgba(255,255,255,0.97) !important;
+}
+
+.dashboard .incident-list {
+  background: #ffffff !important;
+}
+
+.dashboard .count-pill {
+  background: #fff1f2 !important;
+  color: #dc2626 !important;
+}
+
+
+/* ============================================================
+   RESPONSE ACTIVITY
+   ============================================================ */
+
+.dashboard .activity-panel {
+  margin-top: 22px !important;
+  background: rgba(255,255,255,0.97) !important;
+}
+
+.dashboard .activity-row {
+  background: #ffffff !important;
+  border-bottom: 1px solid #edf0f4 !important;
+}
+
+.dashboard .activity-row b,
+.dashboard .activity-row small {
+  color: #000000 !important;
+}
+
+
+/* ============================================================
+   SIDEBAR
+   ============================================================ */
+
+.app-shell .sidebar {
+  background: #ffffff !important;
+  border-right: 1px solid #e5e7eb !important;
+}
+
+
+/* Sidebar title */
+.app-shell .sidebar-title {
+  color: #7b8799 !important;
+}
+
+
+/* Sidebar links */
+.app-shell .sidebar-link {
+  color: #526078 !important;
+  background: transparent !important;
+}
+
+
+/* Hover */
+.app-shell .sidebar-link:hover {
+  color: #2563eb !important;
+  background: #eff6ff !important;
+}
+
+
+/* ACTIVE COMMAND CENTER / OVERVIEW */
+.app-shell .sidebar-link.active {
+  color: #2563eb !important;
+  background: #eff6ff !important;
+  font-weight: 700 !important;
+}
+
+
+/* Bottom sidebar buttons */
+.app-shell .sidebar-action {
+  background: #2563eb !important;
+  color: #ffffff !important;
+  border-color: #2563eb !important;
+}
+
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 1100px) {
+  .dashboard .stats-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .dashboard .dashboard-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 700px) {
+  .dashboard .stats-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .dashboard .page-heading {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+  }
+}
  

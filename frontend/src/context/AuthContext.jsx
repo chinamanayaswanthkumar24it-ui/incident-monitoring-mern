@@ -44,8 +44,11 @@ export function AuthProvider({ children }) {
     role,
   });
 
-  // Do NOT log the user in automatically.
-  // The backend has already saved the account.
+  // Clear any old login session
+  localStorage.removeItem("iw_token");
+  setToken(null);
+  setUser(null);
+
   return res.data;
 }, []);
 

@@ -481,4 +481,15 @@ button:hover,
   background-color: #000000 !important;
   color: #ffffff !important;
 }
+/* MAKE SIDEBAR CONTENT WIDER */
+.app-shell .sidebar .side-link {
+  width: 100% !important;
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
+
+.app-shell .sidebar .side-title {
+  padding-left: 20px !important;
+  padding-right: 20px !important;
+}
  

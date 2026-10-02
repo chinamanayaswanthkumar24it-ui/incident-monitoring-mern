@@ -492,4 +492,78 @@ button:hover,
   padding-left: 20px !important;
   padding-right: 20px !important;
 }
- 
+/* USER PROFILE POPUP */
+
+.app-shell .topbar {
+  position: relative;
+}
+
+.profile-popup {
+  position: absolute;
+  top: 75px;
+  right: 6%;
+  width: 280px;
+  background: #ffffff;
+  color: #111111;
+  border-radius: 14px;
+  padding: 16px;
+  z-index: 9999;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.30);
+}
+
+.profile-popup-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.profile-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #000000;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 15px;
+}
+
+.profile-popup-head strong {
+  display: block;
+  color: #111111;
+  font-size: 15px;
+}
+
+.profile-popup-head small {
+  display: block;
+  margin-top: 4px;
+  color: #6b7280;
+  font-size: 12px;
+  text-transform: capitalize;
+}
+
+.profile-details {
+  padding-top: 10px;
+}
+
+.profile-details div {
+  padding: 8px 0;
+}
+
+.profile-details span {
+  display: block;
+  color: #6b7280;
+  font-size: 11px;
+  margin-bottom: 3px;
+}
+
+.profile-details b {
+  display: block;
+  color: #111111;
+  font-size: 13px;
+  word-break: break-word;
+}

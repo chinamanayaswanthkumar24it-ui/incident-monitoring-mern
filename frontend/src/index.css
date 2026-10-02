@@ -288,3 +288,138 @@ button:hover,
     url("https://images.unsplash.com/photo-1639313521811-fdfb1c040ddb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWFuZCUyMGNlbnRlcnxlbnwwfHwwfHx8MA%3D%3D")
     center / cover fixed no-repeat;
 }
+/* =========================================
+   INCIDENTWATCH - DASHBOARD THEME
+   ========================================= */
+
+/* Background image across the application */
+.app-shell {
+  background:
+    linear-gradient(
+      rgba(8, 25, 55, 0.45),
+      rgba(8, 25, 55, 0.45)
+    ),
+    url("https://images.unsplash.com/photo-1639313521811-fdfb1c040ddb?w=1000&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8Y29tbWFuZCUyMGNlbnRlcnxlbnwwfHwwfHx8MA%3D%3D")
+    center / cover fixed no-repeat !important;
+}
+
+/* -----------------------------------------
+   TRANSPARENT HEADER
+   ----------------------------------------- */
+
+.app-shell .topbar {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-bottom: none !important;
+}
+
+/* Header text */
+.app-shell .topbar,
+.app-shell .topbar a,
+.app-shell .topbar span {
+  color: #000 !important;
+}
+
+/* Header navigation */
+.app-shell .topbar .app-nav a {
+  color: #000 !important;
+  background: transparent !important;
+}
+
+/* Header navigation hover */
+.app-shell .topbar .app-nav a:hover {
+  color: #000 !important;
+  background: rgba(255, 255, 255, 0.35) !important;
+}
+
+/* Logo text */
+.app-shell .topbar .brand {
+  color: #000 !important;
+}
+
+/* Keep logo icon visible */
+.app-shell .topbar .brand-mark {
+  color: #fff !important;
+  background: #111827 !important;
+}
+
+/* -----------------------------------------
+   DASHBOARD CONTENT - BLACK TEXT
+   ----------------------------------------- */
+
+.dashboard {
+  background: transparent !important;
+  color: #000 !important;
+}
+
+/* Main headings */
+.dashboard h1,
+.dashboard h2,
+.dashboard h3,
+.dashboard p,
+.dashboard span,
+.dashboard b,
+.dashboard small {
+  color: #000;
+}
+
+/* Command center label */
+.dashboard .section-kicker {
+  color: #000 !important;
+}
+
+/* Subtitle */
+.dashboard .page-heading p {
+  color: #000 !important;
+}
+
+/* Panel headings */
+.dashboard .panel-head h2 {
+  color: #000 !important;
+}
+
+/* Panel subtitles */
+.dashboard .panel-head p {
+  color: #000 !important;
+}
+
+/* -----------------------------------------
+   WHITE CONTENT CARDS
+   ----------------------------------------- */
+
+.dashboard .panel,
+.dashboard .stats-grid > * {
+  background: rgba(255, 255, 255, 0.96) !important;
+}
+
+/* Keep incident status colors readable */
+.dashboard .activity-tag {
+  color: #000 !important;
+}
+
+/* -----------------------------------------
+   REPORT INCIDENT BUTTON
+   ----------------------------------------- */
+
+.dashboard .page-heading .btn-primary {
+  background: #2563eb !important;
+  color: #fff !important;
+  border-color: #2563eb !important;
+}
+
+.dashboard .page-heading .btn-primary svg {
+  color: #fff !important;
+}
+
+/* -----------------------------------------
+   MAP SEARCH BUTTON
+   ----------------------------------------- */
+
+.dashboard .map-panel .icon-btn {
+  background: #2563eb !important;
+  color: #fff !important;
+}
+
+.dashboard .map-panel .icon-btn svg {
+  color: #fff !important;
+}

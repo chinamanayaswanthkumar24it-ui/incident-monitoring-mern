@@ -433,13 +433,12 @@ button:hover,
   width: 100% !important;
   box-sizing: border-box !important;
 }
-/* HOW IT WORKS SECTION - BLACK TEXT */
-/* HOW IT WORKS - ONLY THESE TEXTS BLACK */
-.how-it-works {
+/* HOW IT WORKS - BLACK TEXT ONLY */
+#how > .section-kicker {
   color: #000000 !important;
 }
 
-.how-it-works h2 {
+#how > h2 {
   color: #000000 !important;
 }
  

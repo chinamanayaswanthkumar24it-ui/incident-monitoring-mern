@@ -433,3 +433,10 @@ button:hover,
   width: 100% !important;
   box-sizing: border-box !important;
 }
+/* HOW IT WORKS SECTION - BLACK TEXT */
+.how-it-works,
+.how-it-works h2,
+.how-it-works h3,
+.how-it-works p {
+  color: #000000 !important;
+}

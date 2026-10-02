@@ -405,3 +405,16 @@ button:hover,
   color: #000000 !important;
   stroke: #000000 !important;
 }
+/* DASHBOARD HEADING CONTENT - WHITE */
+
+.app-shell .dashboard .section-kicker {
+  color: #ffffff !important;
+}
+
+.app-shell .dashboard .page-heading h1 {
+  color: #ffffff !important;
+}
+
+.app-shell .dashboard .page-heading p {
+  color: #ffffff !important;
+}

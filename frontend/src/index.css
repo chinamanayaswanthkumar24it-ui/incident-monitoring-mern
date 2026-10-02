@@ -454,4 +454,31 @@ button:hover,
   color: #ffffff !important;
   stroke: #ffffff !important;
 }
+/* FINAL HEADER NAVIGATION OVERRIDE */
+
+.app-shell .topbar .app-nav a.active {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.app-shell .topbar .app-nav a.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Hover */
+.app-shell .topbar .app-nav a:hover {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+/* Sign out */
+.app-shell .topbar .app-nav button:hover,
+.app-shell .topbar .app-nav .btn:hover {
+  background: #000000 !important;
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
  

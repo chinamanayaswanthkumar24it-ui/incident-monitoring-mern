@@ -36,13 +36,18 @@ export function AuthProvider({ children }) {
     return res.data.user;
   }, []);
 
-  const signup = useCallback(async (name, email, password, role) => {
-    const res = await api.post("/auth/signup", { name, email, password, role });
-    localStorage.setItem("iw_token", res.data.token);
-    setToken(res.data.token);
-    setUser(res.data.user);
-    return res.data.user;
-  }, []);
+ const signup = useCallback(async (name, email, password, role) => {
+  const res = await api.post("/auth/signup", {
+    name,
+    email,
+    password,
+    role,
+  });
+
+  // Do NOT log the user in automatically.
+  // The backend has already saved the account.
+  return res.data;
+}, []);
 
   const logout = useCallback(() => {
     localStorage.removeItem("iw_token");

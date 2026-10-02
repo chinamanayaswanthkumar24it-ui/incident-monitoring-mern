@@ -13,19 +13,27 @@ export default function Signup(){
  const { signup } = useAuth();
  const nav=useNavigate();
 
- const submit = async e => {
-   e.preventDefault();
-   setError("");
-   setSubmitting(true);
-   try {
-     await signup(name, email, password, role);
-     nav("/login");
-   } catch(err) {
-     setError(err.message || "Could not create your account. Please try again.");
-   } finally {
-     setSubmitting(false);
-   }
- };
+ const submit = async (e) => {
+  e.preventDefault();
+  setError("");
+  setSubmitting(true);
+
+  try {
+    await signup(name, email, password, role);
+
+    // Account created successfully → go to Login
+    nav("/login", { replace: true });
+
+  } catch (err) {
+    setError(
+      err.response?.data?.message ||
+      err.message ||
+      "Could not create your account. Please try again."
+    );
+  } finally {
+    setSubmitting(false);
+  }
+};
 
  return <div className="auth-page"><div className="auth-side"><Link to="/" className="brand light"><span className="brand-mark"><ShieldAlert/></span>IncidentWatch</Link><div><div className="eyebrow"><span className="live-dot"></span> JOIN THE NETWORK</div><h2>Build a safer<br/><em>community together.</em></h2><p>Create an account and access the tools designed for your role in emergency response.</p></div><small>Secure role-based access</small></div><div className="auth-panel"><div className="auth-box signup-box"><div className="auth-logo"><ShieldAlert/></div><h1>Create your account</h1><p>Start monitoring with IncidentWatch.</p>
  <form className="auth-form" onSubmit={submit}>

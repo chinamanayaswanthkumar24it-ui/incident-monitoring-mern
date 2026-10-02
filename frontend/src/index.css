@@ -441,4 +441,16 @@ button:hover,
 #how > h2 {
   color: #000000 !important;
 }
+/* SIDEBAR COMMAND CENTER + MENU - WHITE */
+
+.app-shell .sidebar .side-title {
+  color: #ffffff !important;
+}
+
+.app-shell .sidebar .side-link,
+.app-shell .sidebar .side-link span,
+.app-shell .sidebar .side-link svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
  

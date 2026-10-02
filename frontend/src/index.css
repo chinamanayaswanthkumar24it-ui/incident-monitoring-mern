@@ -393,3 +393,15 @@ button:hover,
 }
 /* Background image across the application */
  
+/* ONLY COMMAND CENTER SIDEBAR CONTENT BLACK */
+
+.app-shell .sidebar .side-title {
+  color: #000000 !important;
+}
+
+.app-shell .sidebar .side-link,
+.app-shell .sidebar .side-link span,
+.app-shell .sidebar .side-link svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+}

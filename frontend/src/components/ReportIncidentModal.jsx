@@ -35,15 +35,44 @@ export default function ReportIncidentModal({ onClose, onCreated }) {
     }
     setSubmitting(true);
     try {
-      const incident = await createIncident({
-        title,
-        description,
-        category,
-        severity,
-        address,
-        lat: Number(lat),
-        lng: Number(lng),
-      });
+    
+let reportLat = Number(lat);
+let reportLng = Number(lng);
+
+// If an address is entered, find its actual map coordinates.
+if (address.trim()) {
+  const query = encodeURIComponent(address.trim());
+
+  const response = await fetch(
+    `https://nominatim.openstreetmap.org/search?format=jsonv2&limit=1&q=${query}`
+  );
+
+  if (!response.ok) {
+    throw new Error("Could not look up the address. Please try again.");
+  }
+
+  const results = await response.json();
+
+  if (!results.length) {
+    throw new Error(
+      "Address not found. Enter a more complete location, including city."
+    );
+  }
+
+  reportLat = Number(results[0].lat);
+  reportLng = Number(results[0].lon);
+}
+
+const incident = await createIncident({
+  title,
+  description,
+  category,
+  severity,
+  address,
+  lat: reportLat,
+  lng: reportLng,
+});
+
       onCreated?.(incident);
       onClose();
     } catch (err) {

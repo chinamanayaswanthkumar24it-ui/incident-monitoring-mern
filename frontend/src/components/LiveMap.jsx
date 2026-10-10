@@ -9,9 +9,10 @@ import {
   useMap,
 } from "react-leaflet";
 
-const DEFAULT_CENTER = [16.5062, 80.648]; // Vijayawada
+// Default map location, shown only when there are no incidents.
+const DEFAULT_CENTER = [16.5062, 80.648];
 
-// Give each severity a different alert color.
+// Alert color based on incident severity.
 const severityColor = (severity) => {
   switch (severity) {
     case "Critical":
@@ -25,7 +26,7 @@ const severityColor = (severity) => {
   }
 };
 
-// Create a warning-symbol marker for the map.
+// Create a warning-symbol marker.
 const createAlertIcon = (severity) => {
   const color = severityColor(severity);
 
@@ -43,41 +44,42 @@ const createAlertIcon = (severity) => {
   });
 };
 
-// Move the map to the newest incident when it is reported.
-function MapUpdater({ latestPosition }) {
+// Automatically move the map to the latest reported incident.
+function MapUpdater({ position }) {
   const map = useMap();
 
   useEffect(() => {
-    if (latestPosition) {
-      map.setView(latestPosition, Math.max(map.getZoom(), 13), {
+    if (position) {
+      map.flyTo(position, Math.max(map.getZoom(), 14), {
         animate: true,
+        duration: 1.2,
       });
     }
-  }, [latestPosition, map]);
+  }, [map, position]);
 
   return null;
 }
 
 export default function LiveMap({ incidents = [] }) {
-  // Keep only incidents with valid GPS coordinates.
+  // Keep incidents with valid latitude and longitude.
   const points = incidents
     .filter((incident) => {
-      const lat = Number(incident.location?.lat);
-      const lng = Number(incident.location?.lng);
+      const lat = incident.location?.lat;
+      const lng = incident.location?.lng;
 
       return (
-        incident.location?.lat !== undefined &&
-        incident.location?.lat !== null &&
-        incident.location?.lng !== undefined &&
-        incident.location?.lng !== null &&
-        incident.location?.lat !== "" &&
-        incident.location?.lng !== "" &&
-        Number.isFinite(lat) &&
-        Number.isFinite(lng) &&
-        lat >= -90 &&
-        lat <= 90 &&
-        lng >= -180 &&
-        lng <= 180
+        lat !== undefined &&
+        lat !== null &&
+        lat !== "" &&
+        lng !== undefined &&
+        lng !== null &&
+        lng !== "" &&
+        Number.isFinite(Number(lat)) &&
+        Number.isFinite(Number(lng)) &&
+        Number(lat) >= -90 &&
+        Number(lat) <= 90 &&
+        Number(lng) >= -180 &&
+        Number(lng) <= 180
       );
     })
     .map((incident) => ({
@@ -87,27 +89,32 @@ export default function LiveMap({ incidents = [] }) {
         Number(incident.location.lng),
       ],
       title: incident.title || "Reported incident",
-      place: incident.location.address || "Location provided",
+      place:
+        incident.location?.address ||
+        incident.address ||
+        "Location provided",
       severity: incident.severity || "Medium",
       status: incident.status || "Reported",
       category: incident.category || "Other",
     }));
 
-  const latestPosition = points[0]?.pos || null;
+  // Assumes the first incident is the newest.
+  const latestPosition = points.length > 0 ? points[0].pos : null;
 
   return (
     <div className="map-wrap">
       <MapContainer
-        center={latestPosition || DEFAULT_CENTER}
+        center={DEFAULT_CENTER}
         zoom={12}
-        scrollWheelZoom
+        scrollWheelZoom={true}
+        style={{ width: "100%", height: "100%", minHeight: "360px" }}
       >
         <TileLayer
-          attribution='&copy; OpenStreetMap contributors'
+          attribution="&copy; OpenStreetMap contributors"
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
 
-        <MapUpdater latestPosition={latestPosition} />
+        <MapUpdater position={latestPosition} />
 
         {points.map((incident) => (
           <Marker
@@ -129,6 +136,11 @@ export default function LiveMap({ incidents = [] }) {
                 </p>
                 <p>
                   <b>Status:</b> {incident.status}
+                </p>
+                <p>
+                  <b>Coordinates:</b>{" "}
+                  {incident.pos[0].toFixed(6)},{" "}
+                  {incident.pos[1].toFixed(6)}
                 </p>
               </div>
             </Popup>

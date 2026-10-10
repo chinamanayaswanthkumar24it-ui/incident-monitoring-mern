@@ -567,3 +567,50 @@ button:hover,
   font-size: 13px;
   word-break: break-word;
 }
+
+/* Road accident warning markers on the live map */
+.incident-marker-wrapper {
+  background: transparent !important;
+  border: none !important;
+}
+
+.incident-alert-marker {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 18px solid transparent;
+  border-right: 18px solid transparent;
+  border-bottom: 34px solid var(--alert-color);
+  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.35));
+  animation: incident-alert-pulse 1.4s infinite;
+}
+
+.incident-alert-marker span {
+  position: absolute;
+  top: 11px;
+  left: -3px;
+  color: white;
+  font-size: 17px;
+  font-weight: 900;
+  line-height: 17px;
+}
+
+.incident-popup p {
+  margin: 6px 0;
+  font-size: 13px;
+}
+
+.incident-popup strong {
+  color: #dc2626;
+  font-size: 14px;
+}
+
+@keyframes incident-alert-pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.12);
+  }
+}
+
